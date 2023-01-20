@@ -16,11 +16,11 @@ body {
 }
 main {
   padding-inline: 12rem;
+  padding-block: 10rem;
 }
 
 header {
   display: flex;
-  padding-top: 10rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -214,7 +214,11 @@ input:checked {
   header {
     padding-top: 4rem;
     width: 66%;
-    flex-flow: column;
     gap: 2rem;
+  }
+
+  main {
+    padding-inline: 8rem;
+    padding-block: 0;
   }
 }
