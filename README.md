@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=8b5cf6">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=a78bfa&labelColor=8b5cf6">
 </p>
 
 <br>
