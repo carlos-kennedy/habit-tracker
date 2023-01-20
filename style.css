@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #09090a;
+  display: grid;
+  height: 100vh;
+}
+main {
+  padding-inline: 12rem;
+}
+
+header {
+  display: flex;
+  padding-top: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 80%;
+}
+
+header svg rect {
+  opacity: 0;
+}
+
+header svg rect:nth-child(2) {
+  transition: ease-in 0.9s;
+}
+header svg rect:nth-child(3) {
+  transition: ease-in 1s;
+}
+header svg rect:nth-child(4) {
+  transition: ease-in 1.3s;
+}
+header svg rect:nth-child(5) {
+  transition: ease-in 1.6s;
+}
+header svg rect:nth-child(6) {
+  transition: ease-in 1.9s;
+}
+header svg rect:nth-child(7) {
+  transition: ease-in 2.2s;
+}
+
+header:hover svg rect:nth-child(2) {
+  opacity: 1;
+}
+header:hover svg rect:nth-child(3) {
+  opacity: 1;
+}
+header:hover svg rect:nth-child(4) {
+  opacity: 1;
+}
+header:hover svg rect:nth-child(5) {
+  opacity: 1;
+}
+header:hover svg rect:nth-child(6) {
+  opacity: 1;
+}
+header:hover svg rect:nth-child(7) {
+  opacity: 1;
+}
+
+button {
+  position: relative;
+
+  display: flex;
+  padding: 1.6rem 2.4rem;
+  gap: 1.2rem;
+
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #8b5cf6;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+button:hover svg * {
+  transition: stroke 0.94s;
+  stroke: #2b1d4a;
+}
+
+button span:before {
+  content: "";
+
+  width: 0%;
+  height: 100%;
+  border-radius: 0.2rem;
+
+  z-index: -1;
+  background: #5e3fa6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: width 0.8s;
+}
+
+button:hover span::before {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+form {
+  display: flex;
+  width: fit-content;
+  padding: 24.2rem 0 0;
+}
+
+.habits {
+  display: flex;
+  flex-flow: column;
+  margin-top: 6rem;
+  margin-right: 3.2rem;
+  gap: 3.2rem;
+}
+
+.habit {
+  width: 4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+  line-height: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.days div.day {
+  display: flex;
+  flex-flow: column;
+  gap: 3.2rem;
+  color: #a1a1aa;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  line-height: 125%;
+  text-align: center;
+}
+
+.day:hover > :not(:hover) {
+  opacity: 0.4;
+  transition: all 0.4s;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  border-radius: 0.8rem;
+  border: 0.2rem solid #a78bfa;
+  background: #18181b;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  cursor: pointer;
+}
+
+input:checked {
+  background: #8b5cf6;
+}
+
+.swal-modal {
+  background-color: #18181b;
+  border: 0.3rem solid #8b5cf6;
+}
+
+.swal-overlay {
+  backdrop-filter: blur(2rem);
+}
+
+.swal-icon--success__hide-corners,
+.swal-icon--success:after,
+.swal-icon--success:before {
+  display: none;
+}
+
+.swal-title {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+.swal-text {
+  font-size: 1.9rem;
+  color: #ffffff;
+}
+
+.swal-button {
+  background-color: #8b5cf6;
+}
+
+@media (max-width: 570px) {
+  button span {
+    display: none;
+  }
+
+  header {
+    padding-top: 4rem;
+    width: 66%;
+    flex-flow: column;
+    gap: 2rem;
+  }
+}
