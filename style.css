@@ -15,8 +15,8 @@ body {
   height: 100vh;
 }
 main {
-  padding-inline: 12rem;
-  padding-block: 10rem;
+  padding-inline: clamp(4rem, -0.8rem + 13.3333vw, 12rem);
+  padding-block: clamp(0rem, -6rem + 16.6667vw, 10rem);
 }
 
 header {
@@ -126,7 +126,7 @@ form {
   flex-flow: column;
   margin-top: 6rem;
   margin-right: 3.2rem;
-  gap: 3.2rem;
+  gap: clamp(1rem, -0.32rem + 3.6667vw, 3.2rem);
 }
 
 .habit {
@@ -168,8 +168,8 @@ input {
   border: 0.2rem solid #a78bfa;
   background: #18181b;
 
-  width: 6.4rem;
-  height: 6.4rem;
+  width: clamp(4.4rem, 3.2rem + 3.3333vw, 6.4rem);
+  height: clamp(4.4rem, 3.2rem + 3.3333vw, 6.4rem);
   cursor: pointer;
 }
 
@@ -206,7 +206,7 @@ input:checked {
   background-color: #8b5cf6;
 }
 
-@media (max-width: 570px) {
+@media (min-width: 320px) {
   button span {
     display: none;
   }
@@ -215,9 +215,10 @@ input:checked {
     padding-top: 4rem;
     gap: 2rem;
   }
+}
 
-  main {
-    padding-inline: 4rem;
-    padding-block: 0;
+@media (min-width: 520px) {
+  button span {
+    display: flex;
   }
 }
